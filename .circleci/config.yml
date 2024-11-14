@@ -95,15 +95,6 @@ jobs:
               exit 1
             fi
 
-      - run:
-          name: Deploy to Vercel
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "main" ]; then
-              npm install -g vercel
-              vercel --token="${VERCEL_TOKEN}" --prod --confirm
-            else
-              echo "Not deploying as this is not the main branch"
-            fi
 
 workflows:
   version: 2
