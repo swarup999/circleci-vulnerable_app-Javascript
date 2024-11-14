@@ -34,8 +34,8 @@ jobs:
               -H "Client-Secret: $INTRUCEPT_CLIENT_SECRET" \
               -F "projectZipFile=@project.zip" \
               -F "applicationId=$INTRUCEPT_APPLICATION_ID" \
-              -F "scanName=Python App SAST Scan from CircleCI" \
-              -F "language=python" \
+              -F "scanName=Javascript App SAST Scan from CircleCI" \
+              -F "language=javascript" \
               https://appsecops-api.intruceptlabs.com/api/v1/integrations/sast-scans)
 
             HTTP_CODE=$(tail -n1 \<< "$SAST_RESPONSE")
